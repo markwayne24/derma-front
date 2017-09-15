@@ -129,21 +129,21 @@ class PatientRecords extends Component{
                         <Col xs={12} md={4}>
                             <Avatar id='avatar-records' src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
                         </Col>
-                        <Col xs={12} md={4}>
-                            <h1>Name: John Butil</h1>
-                            <h3>Patient No. 2017001</h3>
+                        <Col xs={12} md={4} >
+                            <h3><b>John Butil</b></h3>
+                            <h4 className='grey-bold'>Patient No. 2017001</h4>
                         </Col>
                         <Col xs={12} md={4}>
-                            <h3>Age: 25</h3>
-                            <h3>Gender: Male</h3>
+                            <h4 className='grey-bold'>Age: 25</h4>
+                            <h4 className='grey-bold'>Gender: Male</h4>
                         </Col>
                         <Col xs={12} md={4}>
-                            <h3>Civil Status: Married</h3>
-                            <h3>Contact Number: 09123456789</h3>
+                            <h4 className='grey-bold'>Civil Status: Married</h4>
+                            <h4 className='grey-bold'>Contact Number: 09123456789</h4>
                         </Col>
                         <Col xs={12} md={4}>
                             <Dropdown overlay={<Actions menus={actions} match={match} />} trigger={['click']}>
-                                <Button type='primary' style={{ marginLeft: 8 }}>
+                                <Button type='primary' style={{ margin: 5 }}>
                                     Actions <Icon type="down" />
                                 </Button>
                             </Dropdown>
@@ -154,7 +154,7 @@ class PatientRecords extends Component{
                     <Menu
                         defaultSelectedKeys={[`${match.url}`]}
                         onClick={this._linkTo}
-                        mode="horizontal">
+                        mode='horizontal'>
                             {records.map((record) =>
                                 <Menu.Item key={`${match.url}${record.url}`}>
                                     <Icon type={record.icon} />
@@ -165,7 +165,7 @@ class PatientRecords extends Component{
                     <Content>
                         <Switch>
                             {records.map((record, i)=>
-                                <Route key={i} exact={record.exact} path={`${match.url}/${record.url}`} component={record.component} />
+                                <Route key={i} exact={record.exact} path={`${match.url}${record.url}`} component={record.component} />
                             )}
                         </Switch>
                     </Content>
