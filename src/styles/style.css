@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+  
+.ant-menu-item span a{
+    text-decoration: none !important;
+    color:white;
+}
+
+.ant-menu-item span a:hover{
+    color:white ;
+}
+
+.ant-layout-header{
+    padding: 0;
+    box-shadow: 0px 1px 5px grey;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+
+.pointer{
+    cursor:pointer;
+}
+
+.margin{
+    margin:8px;
+}
+
+.small-logo{
+    margin-top:8px;
+    width:200px;
+    height:50px;
+    max-width: 200px;
+    max-height: 50px;
+    background-color:white;
+}
