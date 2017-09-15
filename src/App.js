@@ -1,19 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Loading from './components/Loading';
+import Loadable from 'react-loadable';
+import { LocaleProvider } from 'antd';
+import enUS from 'antd/lib/locale-provider/en_US';
+
+const AsyncLoginLayout = Loadable({
+	loader: () => import('./layouts/auth'),
+	loading: Loading
+});
+
+const AsyncDefaultLayout = Loadable({
+	loader: () => import('./layouts/default'),
+	loading: Loading
+});
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+			<LocaleProvider locale={enUS}>
+				<Router>
+					<div className="App">
+						<Route exact path="/" component={AsyncLoginLayout} />
+						<Route path="/dashboard" component={AsyncDefaultLayout} />
+					</div>
+				</Router>
+			</LocaleProvider>
     );
   }
 }
