@@ -1,0 +1,29 @@
+.content-top{
+    margin:15px 10px 10px 10px;
+    padding: 20px;
+    background: #fff;
+    min-height: 150px;
+    box-shadow: 0px 0px 10px #c2cad8;
+    -moz-box-shadow: 0px 0px 10px #c2cad8;
+    -ms-box-shadow: 0px 0px 10px #c2cad8;
+    -o-box-shadow: 0px 0px 10px #c2cad8;
+    -webkit-box-shadow: 0px 0px 10px #c2cad8;
+}
+
+.content-body{
+    margin:10px;
+    padding: 0px 10px;
+    background: #fff;
+    min-height: 360px;
+    box-shadow: 0px 0px 10px #c2cad8;
+    -moz-box-shadow: 0px 0px 10px #c2cad8;
+    -ms-box-shadow: 0px 0px 10px #c2cad8;
+    -o-box-shadow: 0px 0px 10px #c2cad8;
+    -webkit-box-shadow: 0px 0px 10px #c2cad8;
+}
+
+#avatar-records{
+    width: 100px;
+    height:100px;
+    border-radius:50%;
+}
