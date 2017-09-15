@@ -56,8 +56,11 @@ class Login extends Component {
 
         return (
             <Layout style={{background: '#fff'}}>
-                <Form className="login-form" style={{margin:'auto'}}>
+                <Form className="login-form" style={{margin:'auto', textAlign:'center'}}>
                     <img className="custom-image" src="/img/logo-big.png" alt="logo" />
+                    <Form.Item>
+                        <h3>Please Login in to access your medix account</h3>
+                    </Form.Item>
                     <FormItem>
                         {getFieldDecorator('userName', {
                             rules: [{ required: true, message: 'Please input your username!' }],
