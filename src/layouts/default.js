@@ -64,6 +64,11 @@ const AsyncApplicationSettings = Loadable({
     loading: Loading
 });
 
+const AsyncPatientRecords = Loadable({
+    loader: () => import('../pages/PatientRecords'),
+    loading: Loading
+});
+
 const menus = [
     {
         key:'profile',
@@ -96,7 +101,7 @@ class DefaultLayout extends Component{
         });
     }
 
-    linkTo = ({key}: any) => {
+    _linkTo = ({key}: any) => {
         let history = this.props.history;
         history.push(key);
     }
@@ -152,7 +157,7 @@ class DefaultLayout extends Component{
                     collapsed={collapsed}
                     onCollapse={this.toggle}
                     >
-                        <Menu theme="dark" defaultSelectedKeys={[`${match.url}`]} mode="inline" onClick={this.linkTo}>
+                        <Menu theme="dark" defaultSelectedKeys={[`${match.url}`]} mode="inline" onClick={this._linkTo}>
                             <Menu.Item key={`${match.url}`}>
                                 <Icon type="home" />
                                 <span>Dashboard</span>
@@ -178,6 +183,7 @@ class DefaultLayout extends Component{
                         <Content style={{ margin: '0 20px' }}>
                             <Switch>
                                 <Route exact path={`${match.url}`} component={AsyncDashboard} />
+                                <Route path={`${match.url}/patients/:id`} component={AsyncPatientRecords} />
                                 <Route path={`${match.url}/patients`} component={AsyncPatients} />
                                 <Route path={`${match.url}/management/accounting`} component={AsyncAccounting} />
                                 <Route path={`${match.url}/management/accounts`} component={AsyncAccounts} />
