@@ -39,6 +39,13 @@ body {
     background-color:white;
 }
 
+.expand-width{
+    width:100%; 
+}
+
+.text-bold{
+    font-weight: bolder;
+}
 /*==========  Non-Mobile First Method  ==========*/
 
     /* Large Devices, Wide Screens */
