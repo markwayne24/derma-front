@@ -10,6 +10,7 @@ import {
     Modal 
 } from 'antd';
 import BigCalendar from 'react-big-calendar';
+import { Link } from 'react-router-dom';
 import moment from 'moment';
 import './style.css';
 
@@ -96,7 +97,7 @@ class Dashboard extends Component {
 
     render() {
         const { visible, loading } = this.state;
-
+        const { match } = this.props;
         return(
             <div>
                 <Breadcrumb style={{ margin: '12px 0' }}>
@@ -166,7 +167,9 @@ class Dashboard extends Component {
                                                         <Button 
                                                             className='btn-space' 
                                                             size='large'>
-                                                            <Icon type='fork' />
+                                                                <Link to={`${match.url}/patients/123`}>
+                                                                    <Icon type='fork' />
+                                                                </Link>
                                                             </Button>
                                                         <Button 
                                                             type='primary' 
