@@ -12,7 +12,8 @@
     "react-dom": "^15.6.1",
     "react-loadable": "^4.0.5",
     "react-router-dom": "^4.1.2",
-    "react-scripts": "1.0.12"
+    "react-scripts": "1.0.12",
+    "trim-canvas": "^0.1.2"
   },
   "devDependencies": {
     "flow-bin": "^0.53.1"
