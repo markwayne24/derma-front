@@ -5,19 +5,20 @@ const FormItem = Form.Item;
 class PatientInfo extends Component{
     render(){
         return(
-            <div>
+            <div style={{padding:'20px'}}>
                 <Form onSubmit={this.handleSubmit}>
                     <FormItem
+                    
                     hasFeedback
                     >
                         <Row gutter={20}>
-                            <Col xs={24} xs={12} lg={8}>
+                            <Col xs={24} sm={12} lg={8}>
                                 <Input/>
                             </Col>
-                            <Col xs={24} xs={12} lg={8}>
+                            <Col xs={24} sm={12} lg={8}>
                                 <Input />
                             </Col>
-                            <Col xs={24} xs={12} lg={8}>
+                            <Col xs={24} sm={12} lg={8}>
                                 <Input />
                             </Col>
                         </Row>
@@ -26,13 +27,13 @@ class PatientInfo extends Component{
                     hasFeedback
                     >
                         <Row gutter={20}>
-                            <Col xs={24} xs={12} lg={8}>
+                            <Col xs={24} sm={12} lg={8}>
                                 <Input/>
                             </Col>
-                            <Col xs={24} xs={12} lg={8}>
+                            <Col xs={24} sm={12} lg={8}>
                                 <Input />
                             </Col>
-                            <Col xs={24} xs={12} lg={8}>
+                            <Col xs={24} sm={12} lg={8}>
                                 <Input />
                             </Col>
                         </Row>
