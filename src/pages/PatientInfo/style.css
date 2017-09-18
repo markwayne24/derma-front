@@ -23,10 +23,47 @@ color: #666;
     color: black;
 }
 
-.wrapper {
-    position: relative;
-    width: 400px;
-    height: 200px;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+.margin-top-bottom{
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+/* use css to set position of modal */
+.vertical-center-modal {
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  .vertical-center-modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width: 0;
+  }
+  
+  .vertical-center-modal .ant-modal {
+    display: inline-block;
+    vertical-align: middle;
+    top: 0;
+    text-align: left;
+  }
+  
+  /*
+  // Use flex which not working in IE
+  .vertical-center-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .vertical-center-modal .ant-modal {
+    top: 0;
+  }
+  */
+
+  .signature{
+      width:150px;
+      height:150px;
+      box-shadow: 0px 0px 1px grey;
+  }
