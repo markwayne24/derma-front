@@ -18,6 +18,7 @@ import {
 import Loadable from 'react-loadable';
 import Loading from '../../components/Loading';
 import Actions from './components/Actions';
+import TopBar from './components/TopBar';
 
 import './style.css';
 
@@ -124,24 +125,36 @@ class PatientRecords extends Component{
 
         return(
             <Layout>
+                <TopBar 
+                    scrollHeight={150} 
+                    actions={actions}
+                    match={match}
+                    imageUrl='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'
+                    name='John Butil'
+                    patientNo='2017001'
+                    age={25}
+                    gender='male'
+                    civilStatus='Married'
+                    contactNo='09123456789'
+                    />
                 <Content className='content-top'>
-                    <Row gutter={20} type='flex' justify='space-around' align='middle'>
-                        <Col xs={12} md={4}>
+                    <Row type='flex' justify='space-around' align='middle'>
+                        <Col xs={6} md={2}>
                             <Avatar id='avatar-records' src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
                         </Col>
-                        <Col xs={12} md={4} >
+                        <Col xs={6} md={4} >
                             <h3><b>John Butil</b></h3>
                             <h4 className='grey-bold'>Patient No. 2017001</h4>
                         </Col>
-                        <Col xs={12} md={4}>
+                        <Col xs={6} md={4}>
                             <h4 className='grey-bold'>Age: 25</h4>
                             <h4 className='grey-bold'>Gender: Male</h4>
                         </Col>
-                        <Col xs={12} md={4}>
+                        <Col xs={6} md={4}>
                             <h4 className='grey-bold'>Civil Status: Married</h4>
                             <h4 className='grey-bold'>Contact Number: 09123456789</h4>
                         </Col>
-                        <Col xs={12} md={4}>
+                        <Col xs={6} md={2}>
                             <Dropdown overlay={<Actions menus={actions} match={match} />} trigger={['click']}>
                                 <Button type='primary' style={{ margin: 5 }}>
                                     Actions <Icon type="down" />

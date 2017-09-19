@@ -2,7 +2,7 @@
     margin:15px 10px 10px 10px;
     padding: 20px;
     background: #fff;
-    min-height: 150px;
+    min-height: 120px;
     box-shadow: 0px 0px 10px #c2cad8;
     -moz-box-shadow: 0px 0px 10px #c2cad8;
     -ms-box-shadow: 0px 0px 10px #c2cad8;
@@ -28,7 +28,51 @@
     border-radius:50%;
 }
 
+#avatar-records-top{
+    margin:8px;
+    width: 50px;
+    height:50px;
+    border-radius:50%;
+}
+
 .grey-bold{
     font-weight: bolder;
     color: #888888;
+}
+
+.black-bold{
+    font-weight: bold;
+    color:black;
+}
+
+.records-content{
+    padding:20px;
+}
+
+.topbar{
+    position: fixed;
+    height:65px;
+    left:0;
+    top:64px;
+    z-index: 1;
+    background-color: #fff;
+    width:100%;
+    font-size: 17px;
+    text-align:center;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.2);
+    transition:top .3s;
+    -moz-transition: top .3s;
+    -o-transition:top .3s;
+    -ms-transition: top .3s;
+}
+  
+.hide{
+    top:-40px
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .topbar{
+        visibility: hidden;
+    }
 }
