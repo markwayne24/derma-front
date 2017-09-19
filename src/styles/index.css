@@ -31,12 +31,15 @@ body {
 }
 
 .small-logo{
-    margin-top:8px;
     width:200px;
-    height:50px;
+    height:60px;
     max-width: 200px;
-    max-height: 50px;
+    max-height: 60px;
     background-color:white;
+}
+
+.bolder{
+    font-weight: bolder;
 }
 
 .expand-width{
@@ -65,7 +68,9 @@ body {
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
-
+    #small-log{
+        visibility: hidden;
+    }
 }
 
 /* Custom, iPhone Retina */ 
