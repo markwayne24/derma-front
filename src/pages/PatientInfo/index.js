@@ -74,7 +74,7 @@ class PatientInfo extends Component{
         );
 
         return(
-            <div style={{padding:'20px'}}>
+            <div className='records-content'>
                 <Form onSubmit={this.handleSubmit}>
                     <Row>
                         <FormItem 
@@ -266,12 +266,12 @@ class PatientInfo extends Component{
                         <div style={{border:'1px solid grey'}}></div>
                     </Row>
                     <Row>
-                        <Checkbox onClick={this._setModalSignature}>I hearby certify that above information / data are true and correct.</Checkbox>
+                        <Checkbox className='bolder' onClick={this._setModalSignature}>I hearby certify that above information / data are true and correct.</Checkbox>
                     </Row>
                     <Row>
                         <div className='signature margin-top-bottom'>
                             {signature
-                            ? <img alt='signature'
+                            ? <img alt='signature' className='signature'
                             src={signature} />
                             : null}
                         </div>
