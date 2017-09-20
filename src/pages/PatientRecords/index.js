@@ -34,6 +34,11 @@ const AsyncTreatmentPlan = Loadable({
     loading: Loading
 });
 
+const AsyncOperative = Loadable({
+    loader: () => import('../Operative'),
+    loading: Loading
+});
+
 const AsyncTreatmentRecords = Loadable({
     loader: () => import('../TreatmentRecords'),
     loading: Loading
@@ -65,6 +70,14 @@ const records = [
         icon:'medicine-box',
         url: '/treatment-plan',
         component: AsyncTreatmentPlan,
+        exact: false
+    },
+    {
+        name:'Operative',
+        label: 'Operative',
+        icon:'switcher',
+        url: '/operative',
+        component: AsyncOperative,
         exact: false
     },
     {
@@ -140,7 +153,7 @@ class PatientRecords extends Component{
                 <Content className='content-top'>
                     <Row type='flex' justify='space-around' align='middle'>
                         <Col xs={6} md={2}>
-                            <Avatar id='avatar-records' src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+                            <Avatar id='avatar-records' src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png' />
                         </Col>
                         <Col xs={6} md={4} >
                             <h3><b>John Butil</b></h3>
@@ -157,7 +170,7 @@ class PatientRecords extends Component{
                         <Col xs={6} md={2}>
                             <Dropdown overlay={<Actions menus={actions} match={match} />} trigger={['click']}>
                                 <Button type='primary' style={{ margin: 5 }}>
-                                    Actions <Icon type="down" />
+                                    Actions <Icon type='down' />
                                 </Button>
                             </Dropdown>
                         </Col>

@@ -26,13 +26,13 @@ function renderOption(item) {
       {item.query} Test1
       <a
         href={`https://s.taobao.com/search?q=${item.query}`}
-        target="_blank"
-        rel="noopener noreferrer"
+        target='_blank'
+        rel='noopener noreferrer'
       >
         {item.category}
       </a>
       test2
-      <span className="global-search-item-count">Test3 {item.count} asdfsd</span>
+      <span className='global-search-item-count'>Test3 {item.count} asdfsd</span>
     </Option>
   );
 }
@@ -51,21 +51,21 @@ class Complete extends Component {
   render() {
     const { dataSource } = this.state;
     return (
-      <div className="global-search-wrapper" style={{ width: '100%' }}>
+      <div className='global-search-wrapper' style={{ width: '100%' }}>
         <AutoComplete
-          className="global-search"
-          size="large"
+          className='global-search'
+          size='large'
           style={{ width: '100%', marginLeft: '10px'}}
           dataSource={dataSource.map(renderOption)}
           onSelect={onSelect}
           onSearch={this.handleSearch}
-          placeholder="Search Patient"
-          optionLabelProp="text"
+          placeholder='Search Patient'
+          optionLabelProp='text'
         >
           <Input
             suffix={(
-              <Button className="search-btn" size="large" type="primary">
-                <Icon type="search" />
+              <Button className='search-btn' size='large' type='primary'>
+                <Icon type='search' />
               </Button>
             )}
           />

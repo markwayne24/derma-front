@@ -4,7 +4,7 @@ import Login from '../pages/Login';
 class AuthLayout extends Component {
     render() {
         return(
-            <div className="login">
+            <div className='login'>
                 <Login />
             </div>
         );

@@ -132,7 +132,12 @@ class Dashboard extends Component {
                                     </Row>
                                 </Col>
                                 <Col>
-                                    <Button type="primary" shape="circle" icon="plus" size='large' onClick={this.showModal} className='margin' />
+                                    <Button 
+                                        type='primary' 
+                                        shape='circle' 
+                                        icon='plus' 
+                                        onClick={this.showModal} 
+                                        className='margin' />
                                 </Col>
                             </Row>
                             <Row className='table-max-height'>
@@ -145,13 +150,13 @@ class Dashboard extends Component {
                                                 extra={actions} 
                                                 style={{ width: '100%' }}>
                                                 <Row 
-                                                    type="flex" 
-                                                    justify="space-between" 
-                                                    align="middle">
+                                                    type='flex' 
+                                                    justify='space-between' 
+                                                    align='middle'>
                                                     <Col style={{display:'flex', alignItems:'center',justify:'space-between', margin:'auto'}}>
                                                         <Avatar 
                                                             className='img-dashboard' 
-                                                            src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
+                                                            src='https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png' />
                                                         <div style={{marginLeft:'10px'}}>
                                                             <p className='font-bolder'>{data.patientNo}</p>
                                                             <p className='font-bold'>{data.practitioner}</p>
@@ -203,13 +208,21 @@ class Dashboard extends Component {
                     </Row>
                     <Modal
                     visible={visible}
-                    title="Title"
+                    title='Title'
                     onOk={this.handleOk}
                     onCancel={this.handleCancel}
                     footer={[
-                        <Button key="back" size="large" onClick={this.handleCancel}>Return</Button>,
-                        <Button key="submit" type="primary" size="large" loading={loading} onClick={this.handleOk}>
-                        Submit
+                        <Button 
+                            key='back' 
+                            size='large' 
+                            onClick={this.handleCancel}>Return</Button>,
+                        <Button 
+                            key='submit' 
+                            type='primary' 
+                            size='large'
+                            loading={loading} 
+                            onClick={this.handleOk}>
+                                Submit
                         </Button>,
                     ]}>
                         <p>Some contents...</p>

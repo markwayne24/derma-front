@@ -68,8 +68,8 @@ class PatientInfo extends Component{
         const { previewVisible, previewImage, fileList, signature, modalSignature } = this.state;
         const uploadButton = (
           <div>
-            <Icon type="plus" />
-            <div className="ant-upload-text">Upload</div>
+            <Icon type='plus' />
+            <div className='ant-upload-text'>Upload</div>
           </div>
         );
 
@@ -80,7 +80,7 @@ class PatientInfo extends Component{
                         <FormItem 
                             xs={24} 
                             md={24}
-                            label="Entry Date">
+                            label='Entry Date'>
                             {getFieldDecorator('date-picker', config)(
                                 <DatePicker format={dateFormat} />
                             )}
@@ -89,7 +89,7 @@ class PatientInfo extends Component{
                     <Row gutter={15}>
                         <Col xs={24} sm={8} md={8}>
                             <FormItem
-                                label="First Name">
+                                label='First Name'>
                                     {getFieldDecorator('first_name', {
                                         rules: [{ required: true, message: 'Please input First Name!' }],
                                     })(
@@ -99,7 +99,7 @@ class PatientInfo extends Component{
                         </Col>
                         <Col xs={24} sm={8} md={8}>
                             <FormItem 
-                                label="First Name">
+                                label='First Name'>
                                     {getFieldDecorator('middle_name', {
                                         rules: [{ required: false, message: 'Please input Middle Name!' }],
                                     })(
@@ -109,7 +109,7 @@ class PatientInfo extends Component{
                         </Col>
                         <Col xs={24} sm={8} md={8}>
                             <FormItem 
-                            label="First Name">
+                            label='First Name'>
                                 {getFieldDecorator('last_name', {
                                     rules: [{ required: true, message: 'Please input Last Name!' }],
                                 })(
@@ -121,7 +121,7 @@ class PatientInfo extends Component{
                     <Row gutter={15}>
                         <Col xs={24} sm={8} md={8}>
                             <FormItem 
-                                label="Birthdate">
+                                label='Birthdate'>
                                 {getFieldDecorator('birthdate', config)(
                                     <DatePicker className='expand-width' />
                                 )}
@@ -133,12 +133,12 @@ class PatientInfo extends Component{
                                 <Select
                                     showSearch
                                     className='expand-width'
-                                    placeholder="Select a gender"
-                                    optionFilterProp="children"
+                                    placeholder='Select a gender'
+                                    optionFilterProp='children'
                                     filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
                                 >
-                                    <Option value="male">Male</Option>
-                                    <Option value="female">Female</Option>
+                                    <Option value='male'>Male</Option>
+                                    <Option value='female'>Female</Option>
                                 </Select>
                             </FormItem>
                         </Col>
@@ -148,14 +148,14 @@ class PatientInfo extends Component{
                                 <Select
                                     showSearch
                                     className='expand-width'
-                                    placeholder="Select a civil status"
-                                    optionFilterProp="children"
+                                    placeholder='Select a civil status'
+                                    optionFilterProp='children'
                                     filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
                                 >
-                                    <Option value="single">Single</Option>
-                                    <Option value="married">Married</Option>
-                                    <Option value="seperated">Seperated</Option>
-                                    <Option value="widowed">Widowed</Option>
+                                    <Option value='single'>Single</Option>
+                                    <Option value='married'>Married</Option>
+                                    <Option value='seperated'>Seperated</Option>
+                                    <Option value='widowed'>Widowed</Option>
                                 </Select>
                             </FormItem>
                         </Col>
@@ -177,13 +177,13 @@ class PatientInfo extends Component{
                     <Row gutter={15}>
                         <Col xs={24} sm={12} md={12}>
                             <FormItem 
-                                label="Home Phone/s">
+                                label='Home Phone/s'>
                                     <Input />
                             </FormItem>
                         </Col>
                         <Col xs={24} sm={12} md={12}>
                             <FormItem 
-                                label="Bussiness Phone/s">
+                                label='Bussiness Phone/s'>
                                     <Input />
                             </FormItem>
                         </Col>
@@ -201,7 +201,7 @@ class PatientInfo extends Component{
                         </Col>
                         <Col xs={24} sm={8} md={8}>
                             <FormItem 
-                                label="Email">
+                                label='Email'>
                                     {getFieldDecorator('email', {
                                         rules: [{ required: false, message: 'Please input email!' }],
                                     })(
@@ -211,7 +211,7 @@ class PatientInfo extends Component{
                         </Col>
                         <Col xs={24} sm={8} md={8}>
                             <FormItem
-                                label="Occupation">
+                                label='Occupation'>
                                     {getFieldDecorator('occupation', {
                                         rules: [{ required: false, message: 'Please input occupation!' }],
                                     })(
@@ -248,8 +248,8 @@ class PatientInfo extends Component{
                     <Row type='flex' justify='start' align='middle'>
                         <Col>
                             <Upload
-                                action="//jsonplaceholder.typicode.com/posts/"
-                                listType="picture-card"
+                                action='//jsonplaceholder.typicode.com/posts/'
+                                listType='picture-card'
                                 fileList={fileList}
                                 onPreview={this.handlePreview}
                                 onChange={this.handleChange}
@@ -257,7 +257,7 @@ class PatientInfo extends Component{
                                 {fileList.length >= 3 ? null : uploadButton}
                             </Upload>
                             <Modal visible={previewVisible} footer={null} onCancel={this.handleCancel}>
-                                <img alt="example" style={{ width: '100%' }} src={previewImage} />
+                                <img alt='example' style={{ width: '100%' }} src={previewImage} />
                             </Modal>
                         </Col>
                         <Col>
@@ -281,7 +281,7 @@ class PatientInfo extends Component{
                     </Row>
                 </Form>
                 <Modal
-                    wrapClassName="vertical-center-modal"
+                    wrapClassName='vertical-center-modal'
                     visible={modalSignature}
                     onOk={this._setModalSignature}
                     onCancel={this._setModalSignature}

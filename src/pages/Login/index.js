@@ -56,8 +56,13 @@ class Login extends Component {
 
         return (
             <Layout style={{background: '#fff'}}>
-                <Form className="login-form" style={{margin:'auto', textAlign:'center'}}>
-                    <img className="custom-image" src="/img/logo-big.png" alt="logo" />
+                <Form 
+                    className='login-form' 
+                    style={{margin:'auto', textAlign:'center'}}>
+                    <img 
+                        className='custom-image' 
+                        src="/img/logo-big.png" 
+                        alt='logo' />
                     <Form.Item>
                         <h3>Please Login in to access your medix account</h3>
                     </Form.Item>
@@ -65,24 +70,30 @@ class Login extends Component {
                         {getFieldDecorator('userName', {
                             rules: [{ required: true, message: 'Please input your username!' }],
                         })(
-                            <Input prefix={<Icon type="user" style={{ fontSize: 13 }} />} placeholder="Username" />
+                            <Input 
+                                prefix={<Icon type='user' style={{ fontSize: 13 }} />} 
+                                placeholder='Username' />
                         )}
                     </FormItem>
                     <FormItem>
                         {getFieldDecorator('password', {
                             rules: [{ required: true, message: 'Please input your Password!' }],
                         })(
-                            <Input prefix={<Icon type="lock" style={{ fontSize: 13 }} />} type="password" placeholder="Password" />
+                            <Input 
+                                prefix={<Icon type='lock' 
+                                style={{ fontSize: 13 }} />} 
+                                type='password' 
+                                placeholder='Password' />
                         )}
                     </FormItem>
                     <FormItem>
                         <Button 
                             style={{width:'100%'}}
-                            type="primary" 
-                            htmlType="submit" 
+                            type='primary' 
+                            htmlType='submit' 
                             loading={authenticating} 
                             onClick={this._login}
-                            className="login-form-button">
+                            className='login-form-button'>
                             Log in
                         </Button>
                     </FormItem>

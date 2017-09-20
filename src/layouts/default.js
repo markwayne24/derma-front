@@ -125,24 +125,34 @@ class DefaultLayout extends Component{
                     <Row type='flex' justify='space-between' align='top'>
                         <Col span={8}>
                             <Search
-                                placeholder="Search Patient"
+                                placeholder='Search Patient'
                                 style={{ marginLeft:'10px', width: 190 }}
                                 onSearch={value => console.log(value)} />
                         </Col>
                         <Col span={8}>
                             <div style={{textAlign:'center'}}>
                                 <a href='/dashboard' onClick={this.transition}>
-                                    <Avatar className='small-logo' shape='square'src='/img/logo-small.png'/>
+                                    <Avatar 
+                                        className='small-logo' 
+                                        shape='square'
+                                        src='/img/logo-small.png'/>
                                 </a>
                             </div>  
                         </Col>
                         <Col span={8}>
                             <div style={{float:'right'}}>
-                                <Dropdown overlay={<MenuTop menus={menus} />} trigger={['click']} style={{display:'flex', alignItems:'middle'}}>
-                                    <span className="pointer" style={{display:'flex'}}>
-                                        <Avatar shape='circle' size='large' style={{margin:'10px 5px', lineHeight:'40px', backgroundColor: '#87d068'}} icon='user' />
+                                <Dropdown 
+                                    overlay={<MenuTop menus={menus} />} 
+                                    trigger={['click']} style={{display:'flex', alignItems:'middle'}}>
+                                    <span className='pointer' style={{display:'flex'}}>
+                                        <Avatar 
+                                            shape='circle' 
+                                            size='large' 
+                                            style={{margin:'10px 5px', lineHeight:'40px', backgroundColor: '#87d068'}} 
+                                            icon='user' />
                                         <div>
-                                            Dr. Stephen Strange <Icon type="down" style={{margin:10}} /> 
+                                            Dr. Stephen Strange 
+                                            <Icon type='down' style={{margin:10}} /> 
                                         </div>
                                         
                                     </span> 
@@ -157,25 +167,34 @@ class DefaultLayout extends Component{
                     collapsed={collapsed}
                     onCollapse={this.toggle}
                     >
-                        <Menu theme="dark" defaultSelectedKeys={[`${match.url}`]} mode="inline" onClick={this._linkTo}>
+                        <Menu 
+                            theme='dark' 
+                            defaultSelectedKeys={[`${match.url}`]} 
+                            mode='inline' onClick={this._linkTo}>
                             <Menu.Item key={`${match.url}`}>
-                                <Icon type="home" />
+                                <Icon type='home' />
                                 <span>Dashboard</span>
                             </Menu.Item>
                             <Menu.Item key={`${match.url}/patients`}>
-                                <Icon type="team" />
+                                <Icon type='team' />
                                 <span>Patients</span>
                             </Menu.Item>
                             <SubMenu
-                            key="management"
-                            title={<span><Icon type="folder" /><span>Clinic Management</span></span>}
+                            key='management'
+                            title={<span><Icon type='folder' /><span>Clinic Management</span></span>}
                             >
-                                <Menu.Item key={`${match.url}/management`}><Icon type="area-chart" />Clinic Management</Menu.Item>
-                                <Menu.Item key={`${match.url}/management/accounting`}><Icon type="share-alt" />Accounting</Menu.Item>
-                                <Menu.Item key={`${match.url}/management/procedures`}><Icon type="bars" />Procedure</Menu.Item>
-                                <Menu.Item key={`${match.url}/management/accounts`}><Icon type="solution" />Accounts</Menu.Item>
-                                <Menu.Item key={`${match.url}/management/clinics`}><Icon type="heart-o" />Clinic</Menu.Item>
-                                <Menu.Item key={`${match.url}/management/application-settings`}><Icon type="setting" />Application Settings</Menu.Item>
+                                <Menu.Item key={`${match.url}/management`}>
+                                    <Icon type='area-chart' />Clinic Management</Menu.Item>
+                                <Menu.Item key={`${match.url}/management/accounting`}>
+                                    <Icon type='share-alt' />Accounting</Menu.Item>
+                                <Menu.Item key={`${match.url}/management/procedures`}>
+                                    <Icon type='bars' />Procedure</Menu.Item>
+                                <Menu.Item key={`${match.url}/management/accounts`}>
+                                    <Icon type='solution' />Accounts</Menu.Item>
+                                <Menu.Item key={`${match.url}/management/clinics`}>
+                                    <Icon type='heart-o' />Clinic</Menu.Item>
+                                <Menu.Item key={`${match.url}/management/application-settings`}>
+                                    <Icon type='setting' />Application Settings</Menu.Item>
                             </SubMenu>
                         </Menu>
                     </Sider>

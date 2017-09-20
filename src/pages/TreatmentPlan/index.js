@@ -106,12 +106,22 @@ class TreatmentPlan extends Component{
             <div className='records-content'>
                 <h2>
                     F.A.M.I Report 
-                    <Button type="primary" shape="circle" icon="plus" size='large' className='margin' />
+                    <Button 
+                        type='primary' 
+                        shape='circle' 
+                        icon='plus' 
+                        className='margin' />
                 </h2>
-                <Table columns={columns} dataSource={data} />
+                <Table 
+                    columns={columns} 
+                    dataSource={data} />
                 <h2>
                     BOTOX Treatment Report
-                    <Button type="primary" shape="circle" icon="plus" size='large' className='margin' />
+                    <Button 
+                        type='primary' 
+                        shape='circle' 
+                        icon='plus' 
+                        className='margin' />
                 </h2>
                 <Table columns={columns} dataSource={data} />
             </div>

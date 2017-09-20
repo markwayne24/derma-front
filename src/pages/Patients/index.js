@@ -24,11 +24,11 @@ const columns = [
             <span>
                 <Icon type='team' />
                 <Link to='www.test.com'>Action 一 {record.name}</Link>
-                <span className="ant-divider" />
-                <a href="">Delete</a>
-                <span className="ant-divider" />
-                <a href="" className="ant-dropdown-link">
-                    More actions <Icon type="down" />
+                <span className='ant-divider' />
+                <a href=''>Delete</a>
+                <span className='ant-divider' />
+                <a href='' className='ant-dropdown-link'>
+                    More actions <Icon type='down' />
                 </a>
             </span>
         ),
@@ -88,7 +88,7 @@ class Patients extends Component {
                 <Content style={{ padding: 24, background: '#fff', minHeight: 360 }}>
                     <Row type='flex' justify='start' align='middle'>
                         <h1>Patient</h1>
-                        <Button type="primary" shape="circle" icon="plus" size='small' onClick={this.showModal} className='margin' />
+                        <Button type='primary' shape='circle' icon='plus' size='small' onClick={this.showModal} className='margin' />
                     </Row>
                     <Row>
                         <Table columns={columns} dataSource={data} />
@@ -97,12 +97,12 @@ class Patients extends Component {
                 
                 <Modal
                     visible={visible}
-                    title="Title"
+                    title='Title'
                     onOk={this.handleOk}
                     onCancel={this.handleCancel}
                     footer={[
-                        <Button key="back" size="large" onClick={this.handleCancel}>Return</Button>,
-                        <Button key="submit" type="primary" size="large" loading={loading} onClick={this.handleOk}>
+                        <Button key='back' size='large' onClick={this.handleCancel}>Return</Button>,
+                        <Button key='submit' type='primary' size='large' loading={loading} onClick={this.handleOk}>
                         Submit
                         </Button>,
                     ]}>
