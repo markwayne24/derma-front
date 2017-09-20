@@ -1,35 +1,59 @@
 import React, { Component } from 'react';
-import { Breadcrumb, Table, Icon, Row, Layout, Button, Modal } from 'antd';
+import { 
+    Breadcrumb,
+    Table, 
+    Avatar,
+    Row,
+    Layout, 
+    Button, 
+    Modal 
+} from 'antd';
 import { Link } from 'react-router-dom';
 
 const { Content } = Layout;
 
 const columns = [
     {
-        title: 'Name',
+        title: 'Patient No',
+        dataIndex: 'patient_no',
+        key: 'patient_no',
+    }, 
+    {
+        title: 'Photo',
+        dataIndex: 'photo',
+        key: 'photo',
+    }, 
+    {
+        title: 'Patient Name',
         dataIndex: 'name',
         key: 'name',
-    }, {
-        title: 'Age',
-        dataIndex: 'age',
-        key: 'age',
-    }, {
-        title: 'Address',
-        dataIndex: 'address',
-        key: 'address',
-    }, {
+    }, 
+    {
+        title: 'Last Visited',
+        dataIndex: 'last_visited',
+        key: 'last_visited',
+    }, 
+    {
+        title: 'Last Doctor',
+        dataIndex: 'last_doctor',
+        key: 'last_doctor',
+    }, 
+    {
+        title: 'Balance',
+        dataIndex: 'balance',
+        key: 'balance',
+    }, 
+    {
+        title: 'Date Added',
+        dataIndex: 'date_added',
+        key: 'date_added',
+    }, 
+    {
         title: 'Action',
         key: 'action',
         render: (text, record) => (
             <span>
-                <Icon type='team' />
-                <Link to='www.test.com'>Action 一 {record.name}</Link>
-                <span className='ant-divider' />
-                <a href=''>Delete</a>
-                <span className='ant-divider' />
-                <a href='' className='ant-dropdown-link'>
-                    More actions <Icon type='down' />
-                </a>
+                <Button icon='arrow-right'></Button>
             </span>
         ),
     }
@@ -38,19 +62,31 @@ const columns = [
 const data = [
     {
         key: '1',
+        patient_no:'2017001',
+        photo: <Avatar size='large' src='http://loremflickr.com/320/240/paris,girl/all'/>,
         name: 'John Brown',
-        age: 32,
-        address: 'New York No. 1 Lake Park',
+        last_visited: 'Aug 07, 2017',
+        last_doctor: 'Dr. Bush Bustamante',
+        balance: 'P 0.00',
+        date_added: 'Aug 04, 2017'
     }, {
         key: '2',
-        name: 'Jim Green',
-        age: 42,
-        address: 'London No. 1 Lake Park',
+        patient_no:'2017002',
+        photo: <Avatar size='large' src='http://loremflickr.com/320/240/paris,girl/all'/>,
+        name: 'John Brown',
+        last_visited: 'Aug 07, 2017',
+        last_doctor: 'Dr. Bush Bustamante',
+        balance: 'P 0.00',
+        date_added: 'Aug 04, 2017'
     }, {
         key: '3',
-        name: 'Joe Black',
-        age: 32,
-        address: 'Sidney No. 1 Lake Park',
+        patient_no:'2017003',
+        photo: <Avatar size='large' src='http://loremflickr.com/320/240/paris,girl/all'/>,
+        name: 'John Brown',
+        last_visited: 'Aug 07, 2017',
+        last_doctor: 'Dr. Bush Bustamante',
+        balance: 'P 0.00',
+        date_added: 'Aug 04, 2017'
     }
 ];
 
@@ -88,7 +124,13 @@ class Patients extends Component {
                 <Content style={{ padding: 24, background: '#fff', minHeight: 360 }}>
                     <Row type='flex' justify='start' align='middle'>
                         <h1>Patient</h1>
-                        <Button type='primary' shape='circle' icon='plus' size='small' onClick={this.showModal} className='margin' />
+                        <Button 
+                            type='primary' 
+                            shape='circle' 
+                            icon='plus' 
+                            size='small' 
+                            onClick={this.showModal} 
+                            className='margin' />
                     </Row>
                     <Row>
                         <Table columns={columns} dataSource={data} />
@@ -101,8 +143,16 @@ class Patients extends Component {
                     onOk={this.handleOk}
                     onCancel={this.handleCancel}
                     footer={[
-                        <Button key='back' size='large' onClick={this.handleCancel}>Return</Button>,
-                        <Button key='submit' type='primary' size='large' loading={loading} onClick={this.handleOk}>
+                        <Button 
+                            key='back' 
+                            size='large' 
+                            onClick={this.handleCancel}>Return</Button>,
+                        <Button 
+                            key='submit' 
+                            type='primary' 
+                            size='large' 
+                            loading={loading} 
+                            onClick={this.handleOk}>
                         Submit
                         </Button>,
                     ]}>

@@ -64,10 +64,10 @@ const data = [
 const actions = ()=> {
     return(
         <Col>
-            <Button className='btn-space'><Icon type='eye' /></Button>
-            <Button ><Icon type='fork' /></Button>
-            <Button type='primary' className='btn-space'><Icon type='check' /></Button>
-            <Button type='danger' className='btn-space'><Icon type='cross' /></Button>
+            <Button className='btn-space' icon='eye' />
+            <Button icon='fork' />
+            <Button type='primary' className='btn-space' icon='check' />
+            <Button type='danger' className='btn-space' icon='cross' />
         </Col>
     );
 };
