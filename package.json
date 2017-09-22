@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "antd": "^2.13.0",
+    "babel-plugin-import": "^1.5.0",
     "flow-bin": "^0.52.0",
     "moment": "^2.18.1",
     "prop-types": "^15.5.10",
@@ -16,6 +17,7 @@
     "trim-canvas": "^0.1.2"
   },
   "devDependencies": {
+    "babel-plugin-import": "^1.5.0",
     "flow-bin": "^0.53.1"
   },
   "scripts": {
