@@ -40,27 +40,27 @@ const AsyncManagement = Loadable({
 });
 
 const AsyncAccounting = Loadable({
-    loader: () => import('../pages/Accounting'),
+    loader: () => import('../pages/Management/pages/Accounting'),
     loading: Loading
 });
 
 const AsyncProcedures = Loadable({
-    loader: () => import('../pages/Procedures'),
+    loader: () => import('../pages/Management/pages/Procedures'),
     loading: Loading
 });
 
 const AsyncAccounts = Loadable({
-    loader: () => import('../pages/Accounts'),
+    loader: () => import('../pages/Management/pages/Accounts'),
     loading: Loading
 });
 
 const AsyncClinics = Loadable({
-    loader: () => import('../pages/Clinics'),
+    loader: () => import('../pages/Management/pages/Clinics'),
     loading: Loading
 });
 
 const AsyncApplicationSettings = Loadable({
-    loader: () => import('../pages/ApplicationSettings'),
+    loader: () => import('../pages/Management/pages/ApplicationSettings'),
     loading: Loading
 });
 

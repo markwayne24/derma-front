@@ -25,32 +25,32 @@ import './style.css';
 const { Content } = Layout;
 
 const AsyncPatientInfo = Loadable({
-    loader: () => import('../PatientInfo'),
+    loader: () => import('./pages/PatientInfo'),
     loading: Loading
 });
 
 const AsyncTreatmentPlan = Loadable({
-    loader: () => import('../TreatmentPlan'),
+    loader: () => import('./pages/TreatmentPlan'),
     loading: Loading
 });
 
 const AsyncOperative = Loadable({
-    loader: () => import('../Operative'),
+    loader: () => import('./pages/Operative'),
     loading: Loading
 });
 
 const AsyncTreatmentRecords = Loadable({
-    loader: () => import('../TreatmentRecords'),
+    loader: () => import('./pages/TreatmentRecords'),
     loading: Loading
 });
 
 const AsyncGallery = Loadable({
-    loader: () => import('../Gallery'),
+    loader: () => import('./pages/Gallery'),
     loading: Loading
 });
 
 const AsyncPrescriptions = Loadable({
-    loader: () => import('../Prescriptions'),
+    loader: () => import('./pages/Prescriptions'),
     loading: Loading
 });
 
