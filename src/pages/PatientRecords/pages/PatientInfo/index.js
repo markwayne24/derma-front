@@ -43,6 +43,8 @@ class PatientInfo extends Component{
     
     _setModalSignature = () => this.setState({ modalSignature: true })
 
+    _setModalSignatureClose = () => this.setState({ modalSignature: false })
+
     handlePreview = (file) => {
         this.setState({
           previewImage: file.url || file.thumbUrl,
@@ -283,8 +285,8 @@ class PatientInfo extends Component{
                 <Modal
                     wrapClassName='vertical-center-modal'
                     visible={modalSignature}
-                    onOk={this._setModalSignature}
-                    onCancel={this._setModalSignature}
+                    onOk={this._setModalSignatureClose}
+                    onCancel={this._setModalSignatureClose}
                     footer={[
                         <Button type='default' key='1' onClick={this._clear}>Clear</Button>,
                         <Button type='primary' key='2' onClick={this._setSignatureDataUrl}>Confirm</Button>
