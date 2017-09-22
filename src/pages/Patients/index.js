@@ -8,7 +8,6 @@ import {
     Button, 
     Modal 
 } from 'antd';
-import { Link } from 'react-router-dom';
 
 const { Content } = Layout;
 
